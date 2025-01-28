@@ -1,3 +1,236 @@
-.App {
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+
+/* Typography */
+h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 64px;
+  color: var(--primary-yellow);
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 40px;
+  color: var(--highlight-light);
+  margin-top: 0;
+}
+
+h3 {
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--highlight-dark);
+}
+
+p {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--highlight-dark);
+}
+
+/* Navigation */
+nav {
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  color: var(--highlight-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav li a:hover {
+  color: var(--primary-green);
+}
+
+/* Buttons */
+.button-primary {
+  background-color: var(--primary-yellow);
+  color: var(--highlight-dark);
+  padding: 12px 24px;
+  border-radius: 16px;
+  border: none;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-primary:hover {
+  background-color: #e5c113;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: #fff;
+  flex-wrap: wrap; /* Ajouté pour permettre la rupture de ligne en petites tailles d'écran */
+}
+
+/* Logo */
+.logo {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0; /* Empêche le logo de se réduire en taille */
+}
+
+/* Menu de navigation */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  flex-grow: 1; /* Laisse le menu prendre l'espace disponible */
+  justify-content: flex-end; /* Place le menu à droite */
+  align-items: center; /* Aligne les éléments au centre verticalement */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.login-button {
+  justify-self: end;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem; /* Réduit la marge pour les écrans plus petits */
+  }
+
+  .logo {
+    width: 150px; /* Réduit la taille du logo pour les petits écrans */
+  }
+
+  .nav-menu {
+    flex-direction: column; /* Change le menu en colonne sur petits écrans */
+    gap: 1rem;
+    width: 100%; /* Prend toute la largeur de l'écran */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-menu a {
+    font-size: 1.1rem; /* Augmente la taille de police pour les liens sur petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 120px; /* Réduit encore la taille du logo sur très petits écrans */
+  }
+
+  .nav-menu {
+    gap: 0.5rem;
+  }
+
+  .nav-menu a {
+    font-size: 1rem; /* Ajuste la taille de police sur très petits écrans */
+  }
+}
+
+.footer {
+  background-color: var(--highlight-light);
+  padding: 4rem 0 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.footer-section h3 {
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+}
+
+.footer-section p {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+  color: var(--highlight-dark);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: var(--primary-green);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 2rem 2rem 0;
+  border-top: 1px solid var(--highlight-dark);
   text-align: center;
+}
+
+.footer-bottom p {
+  color: var(--highlight-dark);
+  font-size: 0.875rem;
 }
