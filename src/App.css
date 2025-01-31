@@ -25,16 +25,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #f8f8f8;
-}
-
-
-/* Typography */
 h1 {
   font-family: "Markazi Text", serif;
   font-size: 64px;
@@ -64,7 +54,6 @@ p {
   color: var(--highlight-dark);
 }
 
-/* Navigation */
 nav {
   padding: 1rem 0;
 }
@@ -89,24 +78,6 @@ nav li a:hover {
   color: var(--primary-green);
 }
 
-/* Buttons */
-.button-primary {
-  background-color: var(--primary-yellow);
-  color: var(--highlight-dark);
-  padding: 12px 24px;
-  border-radius: 16px;
-  border: none;
-  font-family: "Karla", sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.button-primary:hover {
-  background-color: #e5c113;
-}
-
-/* Images */
 img {
   max-width: 100%;
   height: auto;
@@ -127,9 +98,10 @@ img {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 20px;
   background-color: #fff;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .logo {
@@ -141,9 +113,9 @@ img {
 .nav-menu {
   display: flex;
   gap: 2rem;
-  flex-grow: 1; /* Laisse le menu prendre l'espace disponible */
-  justify-content: flex-end; /* Place le menu à droite */
-  align-items: center; /* Aligne les éléments au centre verticalement */
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-menu a {
@@ -156,46 +128,9 @@ img {
   justify-self: end;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .header {
-    padding: 0 1rem; /* Réduit la marge pour les écrans plus petits */
-  }
-
-  .logo {
-    width: 150px; /* Réduit la taille du logo pour les petits écrans */
-  }
-
-  .nav-menu {
-    flex-direction: column; /* Change le menu en colonne sur petits écrans */
-    gap: 1rem;
-    width: 100%; /* Prend toute la largeur de l'écran */
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav-menu a {
-    font-size: 1.1rem; /* Augmente la taille de police pour les liens sur petits écrans */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    width: 120px; /* Réduit encore la taille du logo sur très petits écrans */
-  }
-
-  .nav-menu {
-    gap: 0.5rem;
-  }
-
-  .nav-menu a {
-    font-size: 1rem; /* Ajuste la taille de police sur très petits écrans */
-  }
-}
-
 .footer {
   background-color: var(--highlight-light);
-  padding: 4rem 0 2rem;
+  padding: 3rem 0 2rem;
 }
 
 .footer-content {
@@ -203,8 +138,8 @@ img {
   margin: 0 auto;
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 8rem;
 }
 
 .footer-section h3 {
@@ -265,7 +200,6 @@ img {
   font-size: 1rem;
 }
 
-/* Hero Section */
 .hero-section {
   background-color: var(--primary-green);
   padding: 2rem 0;
@@ -306,23 +240,20 @@ img {
   object-fit: cover;
 }
 
-/* Media Queries */
-
 @media (max-width: 768px) {
   .hero-content {
-    grid-template-columns: 1fr; /* Passe à une colonne sur petits écrans */
-    text-align: center; /* Centre le texte */
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .hero-text h2 {
-    font-size: 28px; /* Réduit la taille de l'en-tête */
+    font-size: 28px;
   }
 
   .hero-text p {
     margin-bottom: 1.5rem;
   }
 
-  /* Masquer l'image sur les petits écrans */
   .hero-image {
     display: none;
   }
@@ -330,17 +261,16 @@ img {
 
 @media (max-width: 480px) {
   .hero-text h2 {
-    font-size: 24px; /* Réduit davantage la taille de l'en-tête */
+    font-size: 24px;
   }
 
   .hero-text p {
-    font-size: 1rem; /* Réduit la taille du texte pour les très petits écrans */
+    font-size: 1rem;
   }
 }
 
-/* Specials Section */
 .specials-section {
-  padding: 4rem 0;
+  padding: 3rem 0;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -429,145 +359,39 @@ img {
   font-weight: bold;
   padding: 0.5rem 0;
   transition: color 0.3s ease;
+  border: 0px;
 }
 
 .order-link:hover {
   color: var(--secondary-orange);
 }
 
-/* Button Styles */
-.button-primary {
-  padding: 0.75rem 2rem;
-  font-size: clamp(14px, 2vw, 16px);
-  border-radius: 8px;
-  border: none;
-  background-color: var(--highlight-dark);
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button-primary:hover {
-  background-color: var(--secondary-orange);
-}
-
-/* Media Queries */
-@media screen and (max-width: 1024px) {
-  .specials-section {
-    padding: 3rem 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .specials-section {
-    padding: 2rem 0;
-  }
-
-  .specials-header {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .specials-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .specials-section {
-    padding: 1.5rem 0;
-  }
-
-  .specials-header {
-    padding: 0 1rem;
-  }
-
-  .specials-grid {
-    padding: 0 1rem;
-    gap: 1rem;
-  }
-
-  .special-card img {
-    height: 180px;
-  }
-
-  .special-content {
-    padding: 1rem;
-  }
-}
-
-/* Pour les très petits écrans */
-@media screen and (max-width: 320px) {
-  .specials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .special-card img {
-    height: 160px;
-  }
-}
-
-/* Pour les grands écrans */
-@media screen and (min-width: 1440px) {
-  .specials-section {
-    padding: 5rem 0;
-  }
-
-  .special-card img {
-    height: 250px;
-  }
-}
-
-/* Pour le mode sombre */
-@media (prefers-color-scheme: dark) {
-  .special-card {
-    color: white;
-  }
-}
-
-/* Pour réduire les animations si l'utilisateur le préfère */
-@media (prefers-reduced-motion: reduce) {
-  .special-card {
-    transition: none;
-  }
-
-  .special-card:hover {
-    transform: none;
-  }
-}
-
-
 .customers-say-container {
   width: 66%;
-  /* height: 100vh; */
   min-height: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4.3rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 6rem;
   position: relative;
   margin: 0 auto;
 }
 
 .customers-say-container::before {
-  content: "";
   width: 100%;
   height: 100vh;
   min-height: 59rem;
   margin-bottom: -4rem;
   position: absolute;
-  /* background-color: rgba(251, 218, 187, 0.3); */
   z-index: -1;
 }
 
 @media (max-width: 1120px) {
   .customers-say-container {
     width: 90%;
-    /* min-height: 100rem; */
   }
 
   .customers-say-container::before {
@@ -598,7 +422,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* gap: 2rem; */
 }
 
 @media (max-width: 840px) {
@@ -612,20 +435,6 @@ img {
     flex-direction: column;
     align-items: center;
   }
-}
-
-
-.container {
-  width: 20rem;
-  height: 20rem;
-  color: var(--color-black);
-  background-color: var(--color-white);
-  border-radius: var(--border-radius);
-  padding: 2.6rem 2.4rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .rating {
@@ -659,6 +468,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: justify;
+  padding-top: 10px;
 }
 
 .testimonial::before {
@@ -667,4 +477,155 @@ img {
 
 .testimonial::after {
   content: close-quote;
+}
+
+.booking-page {
+  min-height: calc(100vh - 200px);
+  background: linear-gradient(
+    to bottom,
+    #495e57 0%,
+    #495e57 40%,
+    #edefee 40%,
+    #edefee 100%
+  );
+  padding: 2rem 1rem;
+}
+
+.booking-section {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.booking-content h1 {
+  color: #495e57;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.booking-form {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #495e57;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.8rem;
+  border: 2px solid #edefee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #f4ce14;
+  outline: none;
+}
+
+.button-primary {
+  background-color: #f4ce14;
+  color: #333;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 1rem;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 206, 20, 0.3);
+}
+
+.button-primary:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .booking-section {
+    padding: 1.5rem;
+  }
+
+  .booking-content h1 {
+    font-size: 2rem;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+  }
+}
+
+.error {
+  border-color: #ff0000 !important;
+  background-color: #fff8f8;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.confirmation-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.confirmation-message h2 {
+  color: #495e57;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-message p {
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.confirmation-message p:last-child {
+  color: #495e57;
+  font-weight: 500;
 }
